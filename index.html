@@ -1,9 +1,12 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<!-- Makes this work on mobile devices without being super zoomed out -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 	<title>heart beats</title>
 
-	<!--  Sources -->
+	<!--  Sources! -->
 	<!-- 
 		https://github.com/daneden/animate.css/blob/master/animate.css 
 		https://css-tricks.com/examples/ShapesOfCSS/
@@ -221,7 +224,9 @@
 </div>
 
 <script type="text/javascript">
+		
 		$(".dial").knob({
+	    // set up the dial options (most of them)
 	    'min':20,
 	    'max':200,
 	    'angleArc': 100,
@@ -235,6 +240,7 @@
 	    'thickness': .15,
 	    'width': 200,
 	    'height': 100,
+	    // ok, so what happens when a value gets set? Let's do some ECMAScripting!
 	    'release': function(value) {
 	    	var beatsPerMinute = value;
 
@@ -243,20 +249,21 @@
 	    	
 	    	// animation duration  = seconds per beat!
 	    	var animationDuration = (Math.round((1/beatsPerSecond) *10) / 10).toFixed(2) + "s";
-	    	var animationDurationCSS = animationDuration + " !important";
 
-	    	console.log(value);
-	    	console.log("Animation Duration: " + animationDuration);
-console.log(document.styleSheets[0]);
+	    	// need !important tag here, I guess -- color changing wasn't working without it.
+	    	var animationDurationColor = animationDuration + " !important";
+
+	    	// console.log(value);
+	    	// console.log("Animation Duration: " + animationDuration);
+			// console.log(document.styleSheets[0]);
 	    	
+	    	// Change animation duration for pulse
 	    	var heartShape = document.getElementsByClassName("animated");
-
 	    	heartShape[0].style.animationDuration = animationDuration;
 
-	    	document.styleSheets[0].addRule('#heart:before, #heart:after','animation-duration:' +animationDurationCSS+ ' ;');
-
-
-
+	    	// Change animation duration for color change. This is a weird way to do it,
+	    	// but necessary because of the pseudo selectors in play here.
+	    	document.styleSheets[0].addRule('#heart:before, #heart:after','animation-duration:' +animationDurationColor+ ' ;');
 	    }
 	});
 
