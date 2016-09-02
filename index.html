@@ -260,7 +260,8 @@
 	    	// Change animation duration for pulse
 	    	var heartShape = document.getElementsByClassName("animated");
 	    	heartShape[0].style.animationDuration = animationDuration;
-	    	heartShape[0].style.['-webkit-animation-duration'] = animationDuration;
+	    	// apparently you can access webkit prefixes by capitalizing the first letter instead of doing normal camelCase
+	    	heartShape[0].style.WebkitAnimationDuration = animationDuration;
 
 	    	// Change animation duration for color change. This is a weird way to do it,
 	    	// but necessary because of the pseudo selectors in play here.
