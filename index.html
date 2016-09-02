@@ -260,7 +260,7 @@
 	    	// Change animation duration for pulse
 	    	var heartShape = document.getElementsByClassName("animated");
 	    	heartShape[0].style.animationDuration = animationDuration;
-	    	heartShape[0].style.webkitAnimationDuration = animationDuration;
+	    	heartShape[0].style.['-webkit-animation-duration'] = animationDuration;
 
 	    	// Change animation duration for color change. This is a weird way to do it,
 	    	// but necessary because of the pseudo selectors in play here.
