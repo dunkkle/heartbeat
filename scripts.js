@@ -2,7 +2,11 @@
 // by changing a couple of animation parameters on the fly:
 // 1. pulse rate
 // 2. colorChange rate
-// yay!
+//
+// Be careful...messy code ahead...learned a lot along the way here.
+// Did you know that Safari sometimes has issues dealing with CSS animation parameter changes?
+// I didn't, either.
+//
 
 
 $(".dial").knob({

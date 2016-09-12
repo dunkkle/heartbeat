@@ -4,36 +4,35 @@
 	<!-- Makes this work on mobile devices without being super zoomed out -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-	<title>heartbeats</title>
+	<title>heartbeat</title>
 
 	<link rel="stylesheet" type="text/css" href="/style.css">
 	<link href="https://fonts.googleapis.com/css?family=Dawning+of+a+New+Day" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Dosis:200" rel="stylesheet">
 
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
-    <script src="./jquery.knob.min.js"></script>
-    
 </head>
-
 
 <body>
 
-<div class="main-container">
-	
-	<div class="heart-container">
-		<div id="heart" class="animated infinite pulse colorchange"></div>
+	<div class="main-container">
+		
+		<div class="heart-container">
+			<div id="heart" class="animated infinite pulse colorchange"></div>
+		</div>
+
+		<div class="text-container">
+			heartbeat
+		</div>
+		<div class="dial-container">
+			<input type="text" class="dial" value=25>
+		</div>
+
 	</div>
 
-	<div class="text-container">
-		heartbeats
-	</div>
-	<div class="dial-container">
-		<input type="text" class="dial" value=25>
-	</div>
-
-</div>
-
-<script type="text/javascript" src="/scripts.js"></script>
+	<!--  Scripts go here because performance -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+	<script src="./jquery.knob.min.js"></script>
+	<script type="text/javascript" src="/scripts.js"></script>
 
 </body>
 </html>
