@@ -1,5 +1,8 @@
 # heartbeat
 
+## Demo
+(http://heartbeat.dunkkle.com)
+
 ## Some of the resources used in this project:
 
 https://github.com/daneden/animate.css/blob/master/animate.css 
